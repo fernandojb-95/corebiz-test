@@ -1,0 +1,19 @@
+main{
+    padding: 20px;
+}
+.products-container{
+    display: grid;
+}
+
+@media(min-width: 450px){
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+    }
+}
+
+@media(min-width: 968px){
+    .products-container{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

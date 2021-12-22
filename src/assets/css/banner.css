@@ -1,0 +1,22 @@
+.main-banner{
+    position: relative;
+}
+.main-banner img{
+    display: block;
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(0.7);
+}
+.main-banner h2, .main-banner h3{
+    color: white;
+    position: absolute;
+    padding: 20px;
+}
+.main-banner h2{
+    top: 20px;
+}
+.main-banner h3{
+    top: 50%;
+}
