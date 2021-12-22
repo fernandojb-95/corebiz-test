@@ -6,24 +6,37 @@
     font-size: 20px;
     margin-bottom: 10px;
     width: 100%;
+    text-align: center;
 }
 .news-form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
 }
-.news-form input{
+.news-form input, .news-form button{
     margin-bottom: 10px;
     height: 52px;
     width: 100%;
-    max-width: 500px;
+    max-width: 374px;
     outline: none;
     border: none;
     padding-left: 5px;
+    font-size: 12px;
 }
 .news-form button{
-    height: 52px;
-    width: 100%;
     background-color: black;
     color: white;
+}
+
+@media(min-width:950px){
+    .news-form{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .news-form input, .news-form button{
+        max-width: 280px;
+        width: 30%;
+    }
 }

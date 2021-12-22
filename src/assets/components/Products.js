@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import '../css/products.css';
 import Card from './Card';
+import Points from './Points';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
@@ -15,7 +16,15 @@ const Products = () => {
     return(
         <main>
             <h2>Más vendidos</h2>
+            {
+                    products.length === 0 &&
+                        <div className='loading'>
+                            <p>Cargando</p>
+                            <img src='https://c.tenor.com/8KWBGNcD-zAAAAAC/loader.gif' alt='loader' />
+                        </div>
+                }
             <section className='products-container'>
+
                 {
                     products.map(product => {
                         return(
@@ -25,6 +34,7 @@ const Products = () => {
 
                 }
             </section>
+            <Points />
         </main>
     )
 }

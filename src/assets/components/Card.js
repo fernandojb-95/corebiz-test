@@ -1,20 +1,25 @@
 import '../css/card.css';
+import Button from './Button';
 const Card = props => {
     return(
         <div className="card">
             <img src={props.imageUrl} alt="Product" className="product-img"/>
-            <p className="product-title">{props.productName}</p>
-            <section className="product-rating">
-            <i className="far fa-star"></i>
-            </section>
-            <p className="list-price">{props.listPrice && props.listPrice}</p>
-            <p className="product-price">{props.price}</p>
-            {
-                props.installments.length > 0 &&
-                <p className="installments">{props.installments[0].quantity} pagos de ${props.installments[0].value} </p>
-            }
-            
-            <button className="">Comprar</button>
+            <div className='product-info'>
+                <p className="product-title">{props.productName}</p>
+                <section className="product-rating">
+                    <i className="far fa-star"></i>
+                </section>
+                {
+                    props.listPrice &&
+                    <p className="list-price">de { props.listPrice.toLocaleString('en-IN', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})}</p>
+                }
+                <p className="product-price"> por {props.price.toLocaleString('en-IN', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})}</p>
+                {
+                    props.installments.length > 0 &&
+                    <p className="installments"> o {props.installments[0].quantity} pagos de ${props.installments[0].value.toLocaleString('en-IN', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})} </p>
+                }
+                <Button />
+            </div>
         </div>
     )
 }

@@ -5,6 +5,7 @@ header{
     flex-wrap: wrap;
     width: 90%;
     margin: 20px auto;
+    max-width: 1050px;
 }
 .menu-icon, .shop-cart{
     width: 20%;
@@ -14,6 +15,15 @@ header{
 }
 .shop-cart{
     justify-content: flex-end;
+}
+.cart-products{
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: red;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
 }
 .fa-shopping-cart, .fa-bars, .fa-search{
     font-size: 22px;
@@ -41,4 +51,39 @@ header{
     position: absolute;
     right: 0px;
     top: 10px;
+}
+.my-account{
+    color: rgb(129, 129, 129);
+    display: flex;
+    align-items: center;
+    display: none;
+}
+.my-account p{
+    padding-left: 10px;
+}
+
+@media(min-width:950px){
+    .menu-icon{
+        display: none;
+    }
+    .logo{
+        width: 20%;
+        order: 1;
+    }
+    .search-input{
+        width: 40%;
+        order: 2;
+        align-items: center;
+        margin-top: 0;
+    }
+    .my-account{
+        display: flex;
+        width: 100px;
+        order: 3;
+    }
+    .shop-cart{
+        order: 4;
+        width: 10%;
+        justify-content: flex-start;
+    }
 }

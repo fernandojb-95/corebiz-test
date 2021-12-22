@@ -1,0 +1,11 @@
+.buy-button{
+    width: 150px;
+    height: 34px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin: 0 auto;
+}
+.buy-button:hover{
+    background-color: blue;
+}
