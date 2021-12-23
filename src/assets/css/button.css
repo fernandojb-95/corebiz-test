@@ -1,13 +1,13 @@
 .buy-button{
     width: 150px;
     height: 34px;
-    background-color: black;
-    color: white;
+    background-color: var(--dark);
+    color: var(--clean);
     border: none;
     margin: 0 auto;
     visibility: hidden;
 }
 .buy-button:hover{
-    background-color: blue;
+    background-color: var(--alert);
     transform: scale(1.1);
 }

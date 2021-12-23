@@ -1,4 +1,6 @@
 import '../css/footer.css';
+import logo from '../img/site-logo-corebiz-preto-cinza.svg';
+
 const Footer = () => {
     return(
         <footer className="footer">
@@ -23,9 +25,11 @@ const Footer = () => {
                 <section className="info">
                     <div className="info-container">
                         <p>Desarrollado por</p>
+                        <img src={logo} alt='corebiz'/>
                     </div>
-                    <div className="info-container">
+                    <div className="info-container second">
                         <p>Powered by</p>
+                        <img src='https://avatars.githubusercontent.com/u/1288938?s=280&v=4' alt='vtex' />
                     </div>
                 </section>
             </div>

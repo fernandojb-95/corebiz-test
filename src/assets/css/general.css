@@ -5,6 +5,15 @@
     padding: 0;
     font-family: 'Nunito', sans-serif;
 }
+:root{
+    --alert: #F8475F;
+    --light: #F2F2F2;
+    --unactive: #bbbbbb;
+    --success: #008f00;
+    --dark: #242424;
+    --clean:#f5f5f5;
+    --letter: #969696;
+}
 button{
     border-radius: 10px;
 }

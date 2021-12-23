@@ -1,6 +1,6 @@
 .newsletter{
     padding: 20px;
-    background-color: #ebebeb;
+    background-color: var(--light);
 }
 .news-title{
     font-size: 20px;
@@ -34,12 +34,12 @@
     border: none;
 }
 .button-unactive{
-    background-color: rgb(189, 189, 189);
-    color: white;
+    background-color: var(--unactive);
+    color: var(--clean);
 }
  .button-active{
-    background-color: black;
-    color: white;
+    background-color: var(--dark);
+    color: var(--clean);
 }
 .button-active:hover{
     transform: scale(1.1);
@@ -54,10 +54,10 @@
 }
 
 .error-msg{
-    color: red;
+    color: var(--alert);
 }
 .success-msg{
-    color: green;
+    color: var(--success);
 }
 
 @media(min-width:950px){

@@ -12,7 +12,11 @@ const Card = props => {
             <div className='product-info'>
                 <p className="product-title">{props.productName}</p>
                 <section className="product-rating">
-                    <i className="far fa-star"></i>
+                   { props.stars >= 1 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i> }
+                   { props.stars >= 2 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i> }
+                   { props.stars >= 3 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i> }
+                   { props.stars >= 4 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i> }
+                   { props.stars >= 5 ? <i className="fas fa-star"></i> : <i className="far fa-star"></i> }
                 </section>
                 {
                     props.listPrice &&

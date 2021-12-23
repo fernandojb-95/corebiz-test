@@ -3,7 +3,7 @@
     justify-self: center;
     text-align: center;
     font-size: 14px;
-    color: #777777;
+    color: var(--letter);
     min-height: 350px; 
     position: relative;
 }
@@ -22,12 +22,11 @@
 }
 
 .card:hover .product-info{
-    background-color: rgb(224, 223, 223);
+    background-color: var(--light)
 }
 .off{
-    background: rgb(255,0,0);
-    background: linear-gradient(225deg, rgba(255,0,0,0.9192051820728291) 0%, rgba(255,43,43,1) 49%, rgba(255,255,255,0) 50%);
-    color: white;
+    background: linear-gradient(225deg, var(--alert) 0%, var(--alert) 49%, #00000000 50%);
+    color: var(--clean);
     width: 60px;
     height: 60px;
     position: absolute;
@@ -39,8 +38,11 @@
 .list-price{
     text-decoration: line-through;
 }
+.fa-star{
+    color: var(--alert);
+}
 .product-price{
-    color: black;
+    color: var(--dark);
     font-size: 18px;
     font-weight: bold;
 }
