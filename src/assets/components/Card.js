@@ -4,6 +4,11 @@ const Card = props => {
     return(
         <div className="card">
             <img src={props.imageUrl} alt="Product" className="product-img"/>
+            {
+                props.listPrice &&
+                <section className='off'>OFF</section>
+            }
+            
             <div className='product-info'>
                 <p className="product-title">{props.productName}</p>
                 <section className="product-rating">
@@ -18,7 +23,7 @@ const Card = props => {
                     props.installments.length > 0 &&
                     <p className="installments"> o {props.installments[0].quantity} pagos de ${props.installments[0].value.toLocaleString('en-IN', {style: 'currency',currency: 'USD', minimumFractionDigits: 2})} </p>
                 }
-                <Button />
+                <Button   />
             </div>
         </div>
     )

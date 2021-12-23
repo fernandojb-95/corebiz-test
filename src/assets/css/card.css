@@ -5,6 +5,7 @@
     font-size: 14px;
     color: #777777;
     min-height: 350px; 
+    position: relative;
 }
 .product-info{
     height: 190px;
@@ -23,6 +24,18 @@
 .card:hover .product-info{
     background-color: rgb(224, 223, 223);
 }
+.off{
+    background: rgb(255,0,0);
+    background: linear-gradient(225deg, rgba(255,0,0,0.9192051820728291) 0%, rgba(255,43,43,1) 49%, rgba(255,255,255,0) 50%);
+    color: white;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    padding: 5px;
+}
 .list-price{
     text-decoration: line-through;
 }
@@ -30,4 +43,8 @@
     color: black;
     font-size: 18px;
     font-weight: bold;
+}
+
+.card:hover .buy-button{
+    visibility: visible;
 }

@@ -6,6 +6,7 @@ import Points from './Points';
 
 const Products = () => {
     const [products, setProducts] = useState([]);
+
     useEffect(() => {
         fetch('https://corebiz-test.herokuapp.com/api/v1/products')
             .then(result => result.json())
@@ -31,7 +32,6 @@ const Products = () => {
                             <Card {...product} key={product.productId} />
                         )
                     })
-
                 }
             </section>
             <Points />

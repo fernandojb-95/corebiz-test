@@ -15,7 +15,7 @@
     max-width: 900px;
     margin: 0 auto;
 }
-.news-form input, .news-form button{
+.news-form input, .news-form .button{
     margin-bottom: 10px;
     height: 52px;
     width: 100%;
@@ -25,18 +25,54 @@
     padding-left: 5px;
     font-size: 12px;
 }
-.news-form button{
+.button{
+    position: relative;
+}
+.button button{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.button-unactive{
+    background-color: rgb(189, 189, 189);
+    color: white;
+}
+ .button-active{
     background-color: black;
     color: white;
+}
+.button-active:hover{
+    transform: scale(1.1);
+}
+
+.loader {
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: calc(50% - 15px);
+    right: 20px;
+}
+
+.error-msg{
+    color: red;
+}
+.success-msg{
+    color: green;
 }
 
 @media(min-width:950px){
     .news-form{
         flex-direction: row;
         justify-content: space-evenly;
+        flex-wrap: wrap;
     }
-    .news-form input, .news-form button{
+    .news-form input, .news-form .button{
         max-width: 280px;
         width: 30%;
+    }
+    .error-msg{
+        text-align: center;
+        width: 100%;
+        padding: 5px;
     }
 }

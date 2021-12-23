@@ -5,7 +5,9 @@
     color: white;
     border: none;
     margin: 0 auto;
+    visibility: hidden;
 }
 .buy-button:hover{
     background-color: blue;
+    transform: scale(1.1);
 }

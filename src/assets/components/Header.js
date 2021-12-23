@@ -1,12 +1,8 @@
-import { useEffect, useState } from 'react';
 
 import '../css/header.css';
 
 const Header = () => {
-    const [products,setProducts] = useState(sessionStorage.getItem('products') || 0)
-    useEffect(() => {
-        setProducts(sessionStorage.getItem('products', products))
-    }, [products])
+    // const [products,setProducts] = useState(sessionStorage.getItem('products'))
     return (
         <header>
             <section className="menu-icon">
@@ -19,7 +15,7 @@ const Header = () => {
                 <i className="fas fa-shopping-cart"></i>
                 <p className='cart-products'>
                     {
-                        products
+                        sessionStorage.getItem('products') || 0
                     }
                 </p>
             </section>
