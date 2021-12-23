@@ -4,14 +4,17 @@ import { useEffect } from 'react/cjs/react.development';
 import '../css/newsletter.css';
 
 const Newsletter = () => {
+    //Se crea referencia para conocer contenido de input
     const name = useRef();
     const email = useRef();
 
+    //Se crean estados para ambos inputs, estado de botón y submit de formulario
     const [valName, setValName] = useState({})
     const [valEmail, setValEmail] = useState({})
     const [buttonState, setButtonState] = useState(false)
     const [form, setForm] =useState({status: 'uncomplete', msg: 'Not completed'})
 
+    //Función para validación de inputs
     const fieldValidation = (input) => { 
         
         switch(input.current.name){
@@ -48,6 +51,7 @@ const Newsletter = () => {
         }      
     }
 
+    //Habilitación de botón
     useEffect(() => {
         if(valName.status === 'ok' && valEmail.status === 'ok'){
             setButtonState(true);
@@ -57,6 +61,7 @@ const Newsletter = () => {
         }
     }, [valName, valEmail])
 
+    //Envío de formulario y pedido por post
     const submit = (e) => {
         e.preventDefault();
         if(valName.status === 'ok' && valEmail.status === 'ok'){

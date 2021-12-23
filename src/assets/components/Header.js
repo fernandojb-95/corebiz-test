@@ -2,7 +2,6 @@
 import '../css/header.css';
 
 const Header = () => {
-    // const [products,setProducts] = useState(sessionStorage.getItem('products'))
     return (
         <header>
             <section className="menu-icon">

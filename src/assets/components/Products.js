@@ -5,8 +5,10 @@ import Card from './Card';
 import Points from './Points';
 
 const Products = () => {
+    //Se crea estado para listado de productos
     const [products, setProducts] = useState([]);
 
+    //Se verificado estado y se realiza el pedido para obtener el listado de productos
     useEffect(() => {
         fetch('https://corebiz-test.herokuapp.com/api/v1/products')
             .then(result => result.json())

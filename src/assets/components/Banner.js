@@ -1,6 +1,7 @@
 import '../css/banner.css';
 import img from '../img/banner-corebiz.jpg';
 import Points from './Points';
+
 const Banner = () => {
     return(
         <section className="main-banner">
